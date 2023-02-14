@@ -1,0 +1,82 @@
+.logbox{border:1px #ddd solid;padding:30px;width:600;margin:auto;}
+.logbox input{width:100%;padding:15px 15px;color:#000000;}
+.btn.btn-color{font-size:17;background-color: #cecece; }
+.btn.btn-color:hover{background-color: #006699;}
+.btn {
+  font-family: "NotokrR";
+  text-decoration: none;
+  text-align: center;
+  border: relative;
+  cursor:hand;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: black;
+}
+.btn:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: #fff;
+}
+
+.box.box-color{background-color: #f1f1fc;border-width:1;border-color:gray}
+.box.box-color:hover{background-color: #ffffff;border-width:1;border-color:gray}
+.box {
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border: none;
+  border-radius: 0px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid transparent;
+  color: #888888;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.box:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+/*¸Þ´º*/
+.mn.mn-color{background-color: #ffffff;}
+.mn.mn-color:hover{background-color: #006699;}
+.mn {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.mn:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+@font-face {
+	font-family: 'NotokrR';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/notokr-regular.eot');
+	src: url('../fonts/notokr-regular.eot') format('embedded-opentype'),
+		 url('../fonts/notokr-regular.woff2') format('woff2'),
+		 url('../fonts/notokr-regular.woff') format('woff');
+}
