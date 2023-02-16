@@ -10,7 +10,7 @@
 
     <table width="800" cellspacing="0" style="border-collapse:collapse;" align="center">
         <tbody><tr>
-            <td background="1.jpg" height="40" style="border-width:1; border-color:black; border-style:none;" valign="bottom">
+            <td background="../1.jpg" height="40" style="border-width:1; border-color:black; border-style:none;" valign="bottom">
                 <font size="3" color="white">현대청운고등학교 무학년강좌</font>
             </td>
         </tr>
@@ -52,8 +52,8 @@
     <table width="800" align="center" cellspacing="0" style="border-collapse:collapse;font-size:13;">
         <tbody><tr>
             <td width="499" style="border-width:1;border-color:gray;border-style:none;">
-                <select name="week_" style="font-family:Nanum Barun Gothic,NanumGothic,Malgun Gothic;width:150;height:27" onchange="numb(this.value,'30619')">
-                    <option value="">유형 선택</option>				<option value="심화과목">심화과목</option>
+                <select name="week" style="font-family:Nanum Barun Gothic,NanumGothic,Malgun Gothic;width:150;height:27" onchange="numb()">
+                    <option id="default" value="">유형 선택</option>				<option value="심화과목">심화과목</option>
                     <option value="창의적체험활동">창의적체험활동</option>
                 </select>
                         </td>
@@ -62,7 +62,7 @@
         </tr>
     </tbody></table>
 
-    <table width="800" align="center" cellspacing="0" style="border-collapse:collapse;font-size:13">
+    <table id="stu_table" width="800" align="center" cellspacing="0" style="border-collapse:collapse;font-size:13">
         <tbody><tr align="center" height="35">
             <td width="7%" style="border-width:1;border-color:gray;border-style:solid;">연번</td>
             <td width="16%" style="border-width:1;border-color:gray;border-style:solid;">유형</td>
@@ -77,8 +77,14 @@
     <iframe name="f2" width="0" height="0" frameborder="no" marginwidth="0" marginheight="0" topmargin="0" scrolling="no"></iframe>
 
     <script>
-    function numb(week_,number){
-        location.href="stu_main.php?week_="+week_+"&number="+number;
+    function numb(){
+        if (document.form1.week.value == "심화과목") {
+            window.open("./stu_main_1.html", "_self");
+        }
+
+        else if (document.form1.week.value == "창의적체험활동") {
+            window.open("stu_main_2.html", "_self");
+        }
     }
 
     function func_submit(){

