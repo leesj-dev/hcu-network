@@ -86,7 +86,7 @@ function func_menu(s_menu){
 	</tr>
 </tbody></table>
 
-<table cellspacing="1" bgcolor="#CCCCCC" align="center" width="850" style="font-size:15;">
+<table id="subjects" cellspacing="1" bgcolor="#CCCCCC" align="center" width="850" style="font-size:15;">
 	<tbody><tr bgcolor="#FFFFFF" align="center" height="30">
 		<td width="7%">연번</td>
 		<td width="14%">영역</td>
@@ -119,7 +119,8 @@ function func_menu(s_menu){
 <script>
 var number = "30619";
 function func_term(term){
-	location.href = "?term="+term;
+	// location.href = "?term="+term;
+	window.location.href = "./index_hcu_"+term+".html";
 }
 
 function func_term_(term){
@@ -135,8 +136,7 @@ function func_term_(term){
 }
 
 function func_lesson(term,lesson){
-	location.href = "?term="+term+"&lesson="+lesson;
-
+	// location.href = "?term="+term+"&lesson="+lesson;
 }
 
 
