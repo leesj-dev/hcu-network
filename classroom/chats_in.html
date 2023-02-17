@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"><head></head><body topmargin="0" leftmargin="0">
+
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <link rel="stylesheet" href="../../style1.css">
+
+
+
+    <div style="text-align:center;">
+
+    <script type="text/javascript">
+    var chat_count=null;
+
+    function chat_no()
+    {
+
+    alert("Chat count : "+chat_count);
+
+    }
+
+    function km35_send_check()
+    {
+
+    if(!km35_send.ctext.value) { alert("내용을 입력하세요 !"); km35_send.ctext.focus(); return false; }
+
+    return true;
+
+    }
+
+    </script>
+
+    <div style="padding:5px;">
+    <table width="820" border="0" cellpadding="5" cellspacing="2" align="center">
+    <colgroup><col width="180"><col width="*">
+
+    </colgroup><tbody><tr>
+    <td style="padding:0px;color:#FFF;font-size:13px" bgcolor="#8899AA" align="center">
+    학년전체 6</td>
+    <td align="left" style="padding:0px;">
+    <table width="100% cellpadding=" 0"="" cellspacing="0">
+    <tbody><tr>
+    <td align="left">
+    &nbsp;
+    </td>
+    <td align="right" valign="bottom">
+    <input type="button" value="대화방 나가기" style="height:25px;cursor:hand;" onclick="location.href='web_chats.php?kcmd=out&amp;rno=1106&amp;uname=이승준'">
+    </td>
+    </tr>
+    </tbody></table>
+    </td>
+    </tr>
+
+    <tr valign="top">
+    <td rowspan="2" style="border:1px dotted #996;" bgcolor="#DDDDCC" align="center">
+
+
+    <div id="chat_ulist" style="height:530px;width:320px;overflow:auto;overflow-x:hidden;">
+    <link rel="stylesheet" href="../../style.css">
+
+
+    <table width="90%" align="center" style="border-collapse:collapse;font-size:12px;margin-top:10px;" cellspacing="0">
+        <tbody><tr align="center">
+            <td width="47%" style="border:1px dotted #8899AA;">성명</td>
+            <td style="border:1px dotted #8899AA;">접속 시간</td>
+        </tr>
+        </tbody></table>
+
+
+    <table>
+    <tbody><tr height="35">
+        <td></td>
+    </tr>
+    </tbody></table></div>
+
+
+    </td>
+    <td bgcolor="#EEEEEE" style="border:1px solid #CCA;">
+    <div id="chat_view" style="height:450px;width:500px;overflow:auto;overflow-x:hidden;padding:15px;">
+    <link rel="stylesheet" href="../../style3.css">
+
+    <table width="100%">
+    <tbody><tr height="35">
+        <td></td>
+    </tr>
+    </tbody></table>
+    <script>
+    //window.scrollTo(0,1000000);
+    document.body.scrollTop = document.body.scrollHeight;
+    </script></div>
+    </td>
+    </tr>
+    <form method="post" action="km_36s.php" name="km35_send" target="chatwrite" onsubmit="return km35_send_check();"></form>
+    <input type="hidden" name="sid" value="hcuhs_30104585c353cce50c62455c5f00feab">
+    <input type="hidden" name="qlesson_c" value="98|study3">
+    <input type="hidden" name="rno" value="1106">
+    <input type="hidden" name="sno" value="">
+    <input type="hidden" name="uname" value="이승준">
+    <input type="hidden" name="cmd" value="chatwrite">
+    <tr>
+    <td bgcolor="#DDDDDD">
+    <input type="text" name="ctext" style="width:80%;height:35;font-size:9t;line-height:160%;padding-left:10px;" autocomplete="off"> <input type="submit" value="보내기" style="width:15%;height:35px;cursor:hand;">
+    </td>
+    </tr>
+
+    </tbody></table>
+    </div>
+
+    <iframe name="chatframe" src="km_36s.php?rno=1106&amp;sid=hcuhs_30104585c353cce50c62455c5f00feab&amp;qlesson_c=98|study3" width="0" height="0" frameborder="0"></iframe>
+    <iframe name="chatwrite" src="km_36s.php?rno=1106&amp;sid=hcuhs_30104585c353cce50c62455c5f00feab&amp;qlesson_c=98|study3&amp;cmd=chatwrite" width="0" height="0" frameborder="0"></iframe>
+
+
+    </div>
+
+
+
+
+    </body></html>
