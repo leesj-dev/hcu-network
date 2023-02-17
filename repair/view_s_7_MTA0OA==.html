@@ -1,0 +1,113 @@
+<html><head></head><body topmargin="0" leftmargin="0"><title>현대청운고등학교</title>
+<link rel="stylesheet" href="../css/style.css">
+<style type="text/css">
+a { text-decoration:none;color:black; }
+body {font-family:NotokrR;}
+</style>
+<title>현대청운고등학교</title>
+<table width="800" align="center" cellspacing="0" style="border-collapse:collapse;">
+    <tbody><tr>
+        <td background="../1.jpg" height="40" style="border-width:1; border-color:black; border-style:none;" valign="bottom"><font color="white">현대청운고등학교 수리의뢰시스템</font></td>
+    </tr>
+    
+</tbody></table>
+
+<table width="800" align="center" cellspacing="0" style="border-collapse:collapse;">
+
+	<tbody><tr>
+
+		<td width="40%" style="border-width:1; border-color:black; border-style:none;" valign="top">
+			<form name="form11" method="post">
+<input type="button" value="첫화면" onclick="location.href='../student.html';" style="font-family:NotokrR;width:80;font-size:14;cursor:hand;">
+<span style="font-size:15;color:blue">30619 이승준</span></form>
+<iframe name="m2" width="0" height="0" frameborder="no"></iframe>		</td>
+		<td width="60%" style="font-size:14" valign="top" align="right">
+			<a href="./student_7.html" class="mn mn-color"><span style="background-color:#006699;color:white;">[목록보기]</span></a>
+			<a href="./write_s.html" class="mn mn-color"><span>[글쓰기]</span></a>
+		</td>
+	</tr>
+
+</tbody></table><form name="form1" method="post">
+<input type="hidden" name="UID" value="1048">
+<br>
+<table width="800" align="center" cellspacing="0" style="border-collapse:collapse;font-size:14">
+    <tbody><tr height="35">
+        <td style="padding:10;border-width:1;border-color:gray;border-style:solid;">
+			제목 : 3층 매점 쪽 여자화장실 3번째 세면대 수리해주세요		</td>
+    </tr>
+    <tr height="35">
+        <td style="padding:10;border-width:1;border-color:gray;border-style:solid;" align="right">
+			<img src="../default_icon.gif">20112&nbsp;박정은&nbsp;|&nbsp;등록일 : 2021-09-28 16:36:03		</td>
+    </tr>
+    <tr>
+        <td height="150" valign="top" style="padding:10;border-width:1;border-color:gray;border-style:solid;">
+			대상 : 행정실 [처리상태 : <font color="fuchsia">완료</font>]
+			<br><br>
+			학기 초부터 언제 고치나 하고 있었는데 계속 뜨거운 물 밖에 안 나와요 수리부탁 드립니다 🤍			
+			<p align="center">
+						</p>
+		</td>
+    </tr>
+</tbody></table>
+<table width="800" align="center" cellspacing="0" style="font-size:14;" bgcolor="gray">
+    <tbody><tr bgcolor="#ffffff" height="35">
+        <td style="border-width:1; border-color:black; border-style:none;" align="right">
+			<a href="#" onclick="func_dap();">[답글]</a>
+					</td>
+    </tr>
+</tbody></table>
+<br>
+<table id="dat" width="800" align="center" cellspacing="0" style="border-collapse:collapse;display:none;">
+	<tbody><tr>
+		<td width="90%">
+			<textarea name="content" style="ime-mode:active;font-family:NotokrR;width:100%;height:100;font-size:14;padding:10;"></textarea>
+		</td>
+		<td width="10%" align="right">
+			<button type="button" style="font-family:NotokrR;width:100%;height:100;font-size:14" onclick="func_submit('1048');">답글입력</button>
+		</td>
+	</tr>
+</tbody></table>
+
+<br>
+
+<iframe name="f2" width="0" height="0" frameborder="no" marginwidth="0" marginheight="0" topmargin="0" scrolling="no"></iframe>
+<script>
+function func_del(UID){
+	del = confirm('이 글을 삭제하시겠습니까?');
+	if(del==true){f2.location.href="del_s.php?UID="+UID;}else{return;}
+
+}
+
+function file_del(UID){
+	del = confirm("이 그림을 삭제할까요?");
+	var aa = "view_s.php";
+	if(del==true){f2.location.href="file_del_s.php?UID="+UID+"&aa="+aa;}else{return;}
+}
+
+function func_submit(UID){
+	document.form1.target = "f2";
+	document.form1.action = "insert_dat_s.php?UID="+UID; 
+	document.form1.submit();
+}
+
+function func_dap(){
+	dat.style.display='';
+}
+
+function func_edit(qUID,dUID){
+	location.href="view_s.php?EUID="+dUID+"&qUID="+qUID;
+}
+
+function func_d_edit(qUID,EUID){
+	document.form1.target = "f2";
+	document.form1.action = "edit_dat_s.php?EUID="+EUID+"&qUID="+qUID; 
+	document.form1.submit();
+}
+
+function func_dat_del(qUID,EUID){
+	del = confirm("이 답글을 삭제하시겠습니까?");
+	if(del == true){
+		f2.location.href = "dat_del_s.php?EUID="+EUID+"&qUID="+qUID; 
+	}else{return;}
+}
+</script></form></body></html>
