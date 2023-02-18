@@ -52,7 +52,7 @@
     <table width="800" align="center" cellspacing="0" style="border-collapse:collapse;font-size:13;">
         <tbody><tr>
             <td width="499" style="border-width:1;border-color:gray;border-style:none;">
-                <select name="week" style="font-family:Nanum Barun Gothic,NanumGothic,Malgun Gothic;width:150;height:27" onchange="numb()">
+                <select name="week" style="font-family:Nanum Barun Gothic,NanumGothic,Malgun Gothic;width:150;height:27" onchange="numb();">
                     <option id="default" value="">유형 선택</option>				<option value="심화과목">심화과목</option>
                     <option value="창의적체험활동">창의적체험활동</option>
                 </select>
@@ -83,7 +83,7 @@
         }
 
         else if (document.form1.week.value == "창의적체험활동") {
-            window.open("stu_main_2.html", "_self");
+            window.open("./stu_main_2.html", "_self");
         }
     }
 

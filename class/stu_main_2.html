@@ -52,7 +52,7 @@
     <table width="800" align="center" cellspacing="0" style="border-collapse:collapse;font-size:13;">
         <tbody><tr>
             <td width="499" style="border-width:1;border-color:gray;border-style:none;">
-                <select name="week_" style="font-family:Nanum Barun Gothic,NanumGothic,Malgun Gothic;width:150;height:27" onchange="numb(this.value,'30619')">
+                <select name="week" style="font-family:Nanum Barun Gothic,NanumGothic,Malgun Gothic;width:150;height:27" onchange="numb();">
                                     <option value="심화과목">심화과목</option>
                     <option value="창의적체험활동" selected="">창의적체험활동</option>
                 </select>
@@ -119,9 +119,16 @@
     <iframe name="f2" width="0" height="0" frameborder="no" marginwidth="0" marginheight="0" topmargin="0" scrolling="no"></iframe>
 
     <script>
-    function numb(week_,number){
-        location.href="stu_main.php?week_="+week_+"&number="+number;
+    function numb(){
+        if (document.form1.week.value == "심화과목") {
+            window.open("./stu_main_1.html", "_self");
+        }
+
+        else if (document.form1.week.value == "창의적체험활동") {
+            window.open("./stu_main_2.html", "_self");
+        }
     }
+
 
     function func_submit(){
         document.form1.target = "f2";

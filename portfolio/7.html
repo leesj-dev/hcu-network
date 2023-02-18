@@ -185,8 +185,8 @@ menu2_1.style.display = '';
 <table width="100%" align="right" cellspacing="0">
 	<tbody><tr>
 		<td style="font-size:14" align="right">
-							<a href="#" onclick="window.open('post_7.php?part_1=자율','','width=630,height=750,statusbar=no,scrollbars=yes,toolbar=no')">[작년기록보기]</a>
-							<a href="write_7.php">[글쓰기]</a>
+							<a href="#" onclick="window.open('./post_7.html','','width=630,height=750,statusbar=no,scrollbars=yes,toolbar=no')">[작년기록보기]</a>
+							<a href="write_7.html">[글쓰기]</a>
 					</td>
 	</tr>
 </tbody></table>
@@ -197,13 +197,27 @@ menu2_1.style.display = '';
 <iframe name="f2" width="0" height="0" frameborder="no"></iframe>
 </form>
 <script>
-function func_del(title,aa,UID){
-	del = confirm('이 내용을 삭제할까요?');
-	if(del==true){f2.location.href="stu_del.php?UID="+UID+"&aa="+aa;}else{return;}
-}
+    function func_del(title,aa,UID){
+        del = confirm('이 내용을 삭제할까요?');
+        if(del==true){
+            // f2.location.href="stu_del.php?UID="+UID+"&aa="+aa;
+            alert('삭제되었습니다.');
+        }
+        else{
+            return;
+        }
+    }
 
-function file_del(file,aa,UID){
-	del = confirm('이 파일을 삭제할까요?');
-	if(del==true){f2.location.href="file_del.php?UID="+UID+"&aa="+aa;}else{return;}
-}
+    function file_del(file,aa,UID){
+        del = confirm('이 파일을 삭제할까요?');
+        if(del==true){
+            // f2.location.href="file_del.php?UID="+UID+"&aa="+aa;
+            alert('삭제되었습니다.');
+            document.getElementById(UID).outerHTML = "";
+        }
+
+        else{
+            return;
+        }
+    }
 </script></main></body></html>

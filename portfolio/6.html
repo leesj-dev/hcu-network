@@ -166,7 +166,7 @@
                                 </tr>
                                 <tr>
                                     <td align="right"><br>
-                                                                                <a href="edit_6.php?UID=MjU0MTU5&amp;aaa=6.php">[수정]</a>
+                                                                                <a href="./edit_6_MjU0MTU5.html">[수정]</a>
                                             <a href="#" onclick="func_del('진로 활동','6.php','254159');">[삭제]</a>
                                                                         </td>
                                 </tr>
@@ -181,8 +181,8 @@
     <table width="100%" align="right" cellspacing="0">
         <tbody><tr>
             <td style="font-size:14" align="right">
-                                <a href="#" onclick="window.open('post_6.php?part_1=진로','','width=630,height=750,statusbar=no,scrollbars=yes,toolbar=no')">[작년기록보기]</a>
-                                <a href="write_6.php">[글쓰기]</a>
+                                <a href="#" onclick="window.open('./post_6.html','','width=630,height=750,statusbar=no,scrollbars=yes,toolbar=no')">[작년기록보기]</a>
+                                <a href="./write_6.html">[글쓰기]</a>
                         </td>
         </tr>
     </tbody></table>
@@ -195,11 +195,25 @@
     <script>
     function func_del(title,aa,UID){
         del = confirm('이 내용을 삭제할까요?');
-        if(del==true){f2.location.href="stu_del.php?UID="+UID+"&aa="+aa;}else{return;}
+        if(del==true){
+            // f2.location.href="stu_del.php?UID="+UID+"&aa="+aa;
+            alert('삭제되었습니다.');
+        }
+        else{
+            return;
+        }
     }
 
     function file_del(file,aa,UID){
         del = confirm('이 파일을 삭제할까요?');
-        if(del==true){f2.location.href="file_del.php?UID="+UID+"&aa="+aa;}else{return;}
+        if(del==true){
+            // f2.location.href="file_del.php?UID="+UID+"&aa="+aa;
+            alert('삭제되었습니다.');
+            document.getElementById(UID).outerHTML = "";
+        }
+
+        else{
+            return;
+        }
     }
     </script></main></body></html>

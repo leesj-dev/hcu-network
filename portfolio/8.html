@@ -147,7 +147,7 @@
     <table width="100%" align="right" cellspacing="0">
         <tbody><tr>
             <td style="font-size:14" align="right">
-                                <a href="write_8.php">[글쓰기]</a>
+                                <a href="./write_8.html">[글쓰기]</a>
                         </td>
         </tr>
     </tbody></table>
@@ -160,11 +160,25 @@
     <script>
     function func_del(title,aa,UID){
         del = confirm('이 내용을 삭제할까요?');
-        if(del==true){f2.location.href="stu_del.php?UID="+UID+"&aa="+aa;}else{return;}
+        if(del==true){
+            // f2.location.href="stu_del.php?UID="+UID+"&aa="+aa;
+            alert('삭제되었습니다.');
+        }
+        else{
+            return;
+        }
     }
 
     function file_del(file,aa,UID){
         del = confirm('이 파일을 삭제할까요?');
-        if(del==true){f2.location.href="file_del.php?UID="+UID+"&aa="+aa;}else{return;}
+        if(del==true){
+            // f2.location.href="file_del.php?UID="+UID+"&aa="+aa;
+            alert('삭제되었습니다.');
+            document.getElementById(UID).outerHTML = "";
+        }
+
+        else{
+            return;
+        }
     }
     </script></main></body></html>
