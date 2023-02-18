@@ -41,7 +41,7 @@ def download(i):
 
     if content != "해당 파일이나 경로가 존재하지 않습니다.".encode(encoding="euc-kr"):
         fname = euc2utf(re.findall("filename=(.+)", response.headers["content-disposition"])[0])
-        with open(os.path.join(".", "files", "result1", f"[{str(i)}] {fname}"), "wb") as f:
+        with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "result1", f"[{str(i)}] {fname}"), "wb") as f:
             f.write(content)
         logging.info(f"[{str(i)}] O")
     else:
@@ -50,4 +50,4 @@ def download(i):
 
 if __name__ == "__main__":
     pool = Pool(os.cpu_count())
-    pool.map(download, range(200000, 300000))
+    pool.map(download, range(220000, 260000))

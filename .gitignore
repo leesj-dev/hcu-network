@@ -1,2 +1,5 @@
 .env
+.DS_Store
 /files/result
+/files/result1
+/files/result2
