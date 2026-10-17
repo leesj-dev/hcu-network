@@ -1,0 +1,2 @@
+# Exclude archived HTML files from GitHub language statistics
+*.html linguist-detectable=false
